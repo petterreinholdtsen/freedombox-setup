@@ -1,3 +1,2 @@
-Tests: test-chroot
-Depends: debootstrap
-Restrictions: needs-root
+Tests: test-run-setup
+Restrictions: needs-root, breaks-testbed, allow-stderr
