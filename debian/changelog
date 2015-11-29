@@ -4,7 +4,10 @@ freedombox-setup (0.7) UNRELEASED; urgency=medium
   * Move hardware setup outside to freedom-maker (Closes: #803734).
   * Update preseed file for stretch (Closes: #806181).
 
- -- James Valleroy <jvalleroy@mailbox.org>  Wed, 25 Nov 2015 21:53:20 -0500
+  [ Sunil Mohan Adapa ]
+  * Remove LXC (Closes: #806184).
+
+ -- James Valleroy <jvalleroy@mailbox.org>  Sat, 28 Nov 2015 19:00:54 -0500
 
 freedombox-setup (0.6) unstable; urgency=medium
   [ Nick Daly ]
