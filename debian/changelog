@@ -6,8 +6,9 @@ freedombox-setup (0.7) UNRELEASED; urgency=medium
 
   [ Sunil Mohan Adapa ]
   * Remove LXC (Closes: #806184).
+  * Update Debian CI test case to fix failing tests (Closes: #806597).
 
- -- James Valleroy <jvalleroy@mailbox.org>  Sat, 28 Nov 2015 19:00:54 -0500
+ -- James Valleroy <jvalleroy@mailbox.org>  Tue, 01 Dec 2015 18:24:09 -0500
 
 freedombox-setup (0.6) unstable; urgency=medium
   [ Nick Daly ]
