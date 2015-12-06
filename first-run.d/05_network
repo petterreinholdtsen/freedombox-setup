@@ -10,6 +10,7 @@ function get-interfaces {
     NO_OF_WIRED_IFACES=$(echo $WIRED_IFACES | wc -w)
 
     WIRELESS_IFACES=$(nmcli --terse --fields type,device device | grep "^wifi:" | cut -d: -f2 | sort)
+    NO_OF_WIRELESS_IFACES=$(echo $WIRELESS_IFACES | wc -w)
 }
 
 function configure-regular-interface {
@@ -77,7 +78,15 @@ function multi-wired-setup {
 
 function one-wired-setup {
     interface="$1"
-    configure-regular-interface "$interface" internal
+
+    case $NO_OF_WIRELESS_IFACES in
+        "0")
+            configure-regular-interface "$interface" internal
+            ;;
+        *)
+            configure-regular-interface "$interface" external
+            ;;
+    esac
 }
 
 function wireless-setup {
