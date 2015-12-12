@@ -1,4 +1,4 @@
-freedombox-setup (0.7) UNRELEASED; urgency=medium
+freedombox-setup (0.7) unstable; urgency=low
 
   [ James Valleroy ]
   * Move hardware setup outside to freedom-maker (Closes: #803734).
@@ -9,7 +9,7 @@ freedombox-setup (0.7) UNRELEASED; urgency=medium
   * Update Debian CI test case to fix failing tests (Closes: #806597).
   * Consider wireless when configuring wired ifaces.
 
- -- James Valleroy <jvalleroy@mailbox.org>  Mon, 07 Dec 2015 08:14:03 -0500
+ -- Federico Ceratto <federico@debian.org>  Sat, 12 Dec 2015 21:56:35 +0000
 
 freedombox-setup (0.6) unstable; urgency=medium
   [ Nick Daly ]

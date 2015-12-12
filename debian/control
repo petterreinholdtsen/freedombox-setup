@@ -6,6 +6,7 @@ Uploaders:
  Bdale Garbee <bdale@gag.com>
  , Nick Daly <Nick.M.Daly@gmail.com>
  , Sunil Mohan Adapa <sunil@medhas.org>
+ , Federico Ceratto <federico@debian.org>
 Build-Depends: debhelper (>= 9)
  , dh-python
  , python3-all
