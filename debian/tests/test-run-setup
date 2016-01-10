@@ -2,4 +2,11 @@
 
 set -e
 
+# Make sure running the test do not modify the users setup, and that
+# git can work even when no HOME is set.
+HOME="$(mktemp -d)"
+export HOME
+
 /usr/lib/freedombox/setup
+
+rm -rf "${HOME}"
