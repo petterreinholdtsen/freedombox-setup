@@ -6,6 +6,7 @@ set -e
 # email address with an empty mail domain.
 if which etckeeper > /dev/null 2>&1 && \
     [ ! -e /etc/mailname ] &&
+    [ "${HOME}" ] &&
     [ -z "$(git config --global --get user.email)" ] ; then
     git config --global user.email "root@localhost"
 fi
