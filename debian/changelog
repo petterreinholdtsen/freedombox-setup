@@ -1,3 +1,12 @@
+freedombox-setup (0.8) unstable; urgency=medium
+
+  * Adjust autopkgtest script to set HOME, to make sure
+    freedombox-setup is installable.
+  * Only run 'git config --global' in postinst when $HOME is set,
+    otherwise git fail.
+
+ -- Petter Reinholdtsen <pere@debian.org>  Tue, 19 Jan 2016 23:17:51 +0000
+
 freedombox-setup (0.7) unstable; urgency=low
 
   [ James Valleroy ]
