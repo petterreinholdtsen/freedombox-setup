@@ -1,3 +1,9 @@
+freedombox-setup (0.9) UNRELEASED; urgency=medium
+
+  * Fix Wi-Fi AP setup. Patch from Daniel Gnoutcheff.
+
+ -- James Valleroy <jvalleroy@mailbox.org>  Tue, 23 Feb 2016 18:52:38 -0500
+
 freedombox-setup (0.8) unstable; urgency=medium
 
   * Adjust autopkgtest script to set HOME, to make sure

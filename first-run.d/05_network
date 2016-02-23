@@ -14,9 +14,9 @@ function get-interfaces {
 }
 
 function configure-regular-interface {
-    interface="$1"
-    zone="$2"
-    connection_name="FreedomBox WAN"
+    local interface="$1"
+    local zone="$2"
+    local connection_name="FreedomBox WAN"
 
     # Create n-m connection for a regular interface
     nmcli con add con-name "$connection_name" ifname "$interface" type ethernet
@@ -27,8 +27,8 @@ function configure-regular-interface {
 }
 
 function configure-shared-interface {
-    interface="$1"
-    connection_name="FreedomBox LAN $interface"
+    local interface="$1"
+    local connection_name="FreedomBox LAN $interface"
 
     # Create n-m connection for eth1
     nmcli con add con-name "$connection_name" ifname "$interface" type ethernet
@@ -47,15 +47,15 @@ function configure-shared-interface {
 }
 
 function configure-wireless-interface {
-    interface="$1"
-    connection_name="FreedomBox $interface"
-    ssid="FreedomBox$interface"
-    secret="freedombox123"
+    local interface="$1"
+    local connection_name="FreedomBox $interface"
+    local ssid="FreedomBox$interface"
+    local secret="freedombox123"
 
-    configure-shared-interface "$interface"
     nmcli con add con-name "$connection_name" ifname "$interface" type wifi ssid "$ssid"
     nmcli con modify "$connection_name" connection.autoconnect TRUE
     nmcli con modify "$connection_name" connection.zone internal
+    nmcli con modify "$connection_name" ipv4.method shared
     nmcli con modify "$connection_name" wifi.mode ap
     nmcli con modify "$connection_name" wifi-sec.key-mgmt wpa-psk
     nmcli con modify "$connection_name" wifi-sec.psk "$secret"
@@ -64,9 +64,9 @@ function configure-wireless-interface {
 }
 
 function multi-wired-setup {
-    first_interface="$1"
+    local first_interface="$1"
     shift
-    remaining_interfaces="$@"
+    local remaining_interfaces="$@"
 
     configure-regular-interface "$first_interface" external
 
@@ -77,7 +77,7 @@ function multi-wired-setup {
 }
 
 function one-wired-setup {
-    interface="$1"
+    local interface="$1"
 
     case $NO_OF_WIRELESS_IFACES in
         "0")
@@ -90,7 +90,7 @@ function one-wired-setup {
 }
 
 function wireless-setup {
-    interfaces="$@"
+    local interfaces="$@"
 
     for interface in $interfaces
     do
