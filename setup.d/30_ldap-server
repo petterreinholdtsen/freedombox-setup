@@ -38,9 +38,9 @@ DEBIAN_FRONTEND=noninteractive apt-get install -y nslcd libpam-ldapd libnss-ldap
 
 pam-auth-update --package
 
-if ! grep -q -- "^-:ALL EXCEPT root fbx (admin):ALL$" \
+if ! grep -q -- "^-:ALL EXCEPT root fbx (admin) (sudo):ALL$" \
      /etc/security/access.conf ; then
-    printf "%s\n" "-:ALL EXCEPT root fbx (admin):ALL" \
+    printf "%s\n" "-:ALL EXCEPT root fbx (admin) (sudo):ALL" \
 	 >> /etc/security/access.conf
 fi
 
