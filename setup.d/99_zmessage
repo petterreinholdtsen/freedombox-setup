@@ -1,0 +1,20 @@
+#!/bin/sh
+
+cat <<EOF
+
+===================================================================
+FreedomBox setup completed
+===================================================================
+
+Please note:
+
+- For server security, all users except 'root', 'fbx' and those in
+  'admin' and 'sudo' groups will be denied console/GUI login access.
+  This is recommended for the security of various services running on
+  FreedomBox.  Please edit /etc/security/access.conf if you wish to
+  remove or alter this restriction.  Also see 'man access.conf'.
+
+- You need to reboot before using FreedomBox to allow first run
+  operations to finish.
+===================================================================
+EOF
