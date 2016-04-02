@@ -16,7 +16,7 @@ Build-Depends: debhelper (>= 9)
  , w3m
  , zip
  , libwww-perl
-Standards-Version: 3.9.6
+Standards-Version: 3.9.7
 Testsuite: autopkgtest
 Homepage: https://wiki.debian.org/FreedomBox
 Vcs-Git: git://anonscm.debian.org/freedombox/freedombox-setup.git
