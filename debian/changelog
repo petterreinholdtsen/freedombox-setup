@@ -1,10 +1,11 @@
-freedombox-setup (0.9) UNRELEASED; urgency=medium
+freedombox-setup (0.9) unstable; urgency=medium
 
+  [ James Valleroy ]
   * Fix Wi-Fi AP setup. Patch from Daniel Gnoutcheff.
   * Allow console access to 'sudo' group users (Closes: #807725).
   * Print important notes after finishing setup (Closes: #803897).
 
- -- James Valleroy <jvalleroy@mailbox.org>  Wed, 02 Mar 2016 20:55:16 -0500
+ -- Federico Ceratto <federico@debian.org>  Sat, 02 Apr 2016 18:12:56 +0100
 
 freedombox-setup (0.8) unstable; urgency=medium
 
