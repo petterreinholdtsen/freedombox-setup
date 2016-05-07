@@ -1,7 +1,7 @@
 freedombox-setup (0.9.1) UNRELEASED; urgency=medium
 
   [ James Vallery ]
-  * Migrate from php5 to php7.0.
+  * Migrate from php5 to php7.0 (Closes: #821484).
 
  -- Sunil Mohan Adapa <sunil@medhas.org>  Sat, 07 May 2016 09:00:53 +0530
 
