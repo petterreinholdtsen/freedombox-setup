@@ -25,7 +25,7 @@ a2enmod headers
 
 # enable some critical modules to avoid restart while installing
 # Plinth applications.
-a2enmod php5
+a2enmod php7.0
 a2enmod cgi
 a2enmod authnz_ldap
 
