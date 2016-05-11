@@ -20,6 +20,25 @@ if dpkg --compare-versions "$2" le "0.0.23" &&
     rmdir /var/freedombox
 fi
 
+# Enable php7.0 Apache module when upgrading from olders version to
+# 0.9.1 or above
+if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then
+    . /usr/share/apache2/apache2-maintscript-helper
+
+    if dpkg --compare-versions "$2" le-nl "0.9" ; then
+        if apache2_has_module php5 ; then
+            # XXX: Hack around maintainer script refusing to disable a
+            # module during configure
+            method="$APACHE2_MAINTSCRIPT_METHOD"
+            APACHE2_MAINTSCRIPT_METHOD="remove"
+            apache2_invoke dismod php5
+            APACHE2_MAINTSCRIPT_METHOD="$method"
+
+            apache2_invoke enmod php7.0
+        fi
+    fi
+fi
+
 # Setup motd
 if [ "$1" = "configure" ] && [ -f /etc/motd ] && [ ! -L /etc/motd ] ; then
     mkdir -p /etc/update-motd.d
