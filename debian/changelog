@@ -1,4 +1,4 @@
-freedombox-setup (0.9.1) UNRELEASED; urgency=medium
+freedombox-setup (0.9.1) unstable; urgency=medium
 
   [ James Vallery ]
   * Migrate from php5 to php7.0 (Closes: #821484).
@@ -6,7 +6,7 @@ freedombox-setup (0.9.1) UNRELEASED; urgency=medium
   [ Sunil Mohan Adapa ]
   * When upgrading from < 0.9 enable php7.
 
- -- James Valleroy <jvalleroy@mailbox.org>  Thu, 12 May 2016 19:45:37 -0400
+ -- Federico Ceratto <federico@debian.org>  Sun, 15 May 2016 12:25:33 +0100
 
 freedombox-setup (0.9) unstable; urgency=medium
 
