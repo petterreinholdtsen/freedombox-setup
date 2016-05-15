@@ -1,3 +1,11 @@
+freedombox-setup (0.10) UNRELEASED; urgency=medium
+
+  [ Sunil Mohan Adapa ]
+  * Require libapache2-mod-gnutls >= 0.7.4-1 to include fix for #514005
+    (Closes: #824370).
+
+ -- James Valleroy <jvalleroy@mailbox.org>  Tue, 17 May 2016 18:14:28 -0400
+
 freedombox-setup (0.9.1) unstable; urgency=medium
 
   [ James Vallery ]
