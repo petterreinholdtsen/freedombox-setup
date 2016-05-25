@@ -29,6 +29,9 @@ a2enmod php7.0
 a2enmod cgi
 a2enmod authnz_ldap
 
+# enable users to share files uploaded to ~/public_html
+a2enmod userdir
+
 # setup freedombox site
 a2enconf freedombox
 
