@@ -18,10 +18,6 @@ else
     . /usr/lib/freedombox/machine-detect
     if [ "$MACHINE" = "dreamplug" ]; then
         kernel_version="$(/bin/ls /boot/vmlinuz-*-kirkwood | sort -rn | head -n1 | sed s#/boot/vmlinuz-##)"
-    else
-        if [ "$MACHINE" = "beaglebone" ]; then
-            kernel_version="$(/bin/ls /boot/vmlinuz-*-armmp | sort -rn | head -n1 | sed s#/boot/vmlinuz-##)"
-        fi
     fi
 
     log_action_begin_msg "Flashing Kernel version $kernel_version "
