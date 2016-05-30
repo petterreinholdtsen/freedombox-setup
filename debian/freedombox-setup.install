@@ -1,7 +1,6 @@
 setup usr/lib/freedombox
 setup.d usr/lib/freedombox
 first-run.d usr/lib/freedombox
-lib/machine-detect usr/lib/freedombox
 data/etc/apache2/conf-available/freedombox.conf etc/apache2/conf-available
 data/etc/avahi/services/*.service etc/avahi/services
 data/etc/sudoers.d/freedombox etc/sudoers.d
