@@ -63,7 +63,7 @@ Depends: ${misc:Depends}
  , ntp
  , openssh-server
  , parted
- , plinth (>= 0.6)
+ , plinth (>> 0.9.2)
  , psmisc
  , resolvconf
  , ssl-cert
