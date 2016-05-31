@@ -9,10 +9,12 @@ freedombox-setup (0.9.2) UNRELEASED; urgency=medium
 
   [James Valleroy]
   * Remove flash-kernel script and corresponding machine-detect script
-   (Closes: #825875).
+    (Closes: #825875).
   * Require plinth >> 0.9.2 to include LDAP setup and PAM configs.
+  * Remove script that creates access point for Dreamplug
+    (Closes: #825939).
 
- -- James Valleroy <jvalleroy@mailbox.org>  Tue, 31 May 2016 12:13:25 -0400
+ -- Sunil Mohan Adapa <sunil@medhas.org>  Tue, 31 May 2016 22:24:38 +0530
 
 freedombox-setup (0.9.1) unstable; urgency=medium
 
