@@ -51,4 +51,14 @@ if [ "$1" = "configure" ] && [ -f /etc/motd ] && [ ! -L /etc/motd ] ; then
     ln -s ../var/run/motd /etc/motd
 fi
 
+# Enable userdir Apache module when upgrading from olders version to
+# 0.9.2 or above
+if [ -e /usr/share/apache2/apache2-maintscript-helper ] ; then
+    . /usr/share/apache2/apache2-maintscript-helper
+
+    if dpkg --compare-versions "$2" le-nl "0.9.1" ; then
+        apache2_invoke enmod userdir
+    fi
+fi
+
 #DEBHELPER#
