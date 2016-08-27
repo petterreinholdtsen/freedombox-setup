@@ -11,12 +11,6 @@ Uploaders:
 Build-Depends: debhelper (>= 9)
  , dh-python
  , python3-all
- , libxml2-utils
- , xmlto
- , dblatex
- , w3m
- , zip
- , libwww-perl
 Standards-Version: 3.9.8
 Testsuite: autopkgtest
 Homepage: https://wiki.debian.org/FreedomBox
